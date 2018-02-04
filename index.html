@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!-- settings -->
         <title>Clock</title>
-        <script src="clock.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="clock.css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- dependencies -->
+        <script src="clock.js"></script>
+        <link rel="stylesheet" href="clock.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     </head>
     <body>
         <!-- controls -->
         <div id="controlsWrapper">
+            
             <!-- background selector -->
             <img id="backgroundIcon" src="backgroundIcon.png" onclick="imageTexboxAppear()" title="Change background">
             <div class="imagebuttonwrapper">
@@ -20,6 +24,7 @@
                 <button onclick="imageTextboxHide()">OK</button>
             </div>
             <br>
+            
             <!-- color selector -->
             <img id="colorPickerIcon" src="colorPickerIcon.png" onclick="colorTextboxAppear()" title="Change text color">
             <div class="colorbuttonwrapper">
@@ -27,6 +32,7 @@
                 <button onclick="colorTextboxHide()">OK</button>
             </div>
             <br>
+            
             <!-- message selector -->
             <img id="messageIcon" src="messageIcon.png" onclick="messageTextboxAppear()" title="Add a message">
             <div class="messagebuttonwrapper">
@@ -34,6 +40,7 @@
                 <button onclick="messageTextboxHide()">OK</button>
             </div>
             <br>
+            
             <!-- seconds selector -->
             <img id="secondsIcon" src="secondsIcon.png" onclick="secondsCheckboxAppear()" title="Toggle seconds">
             <div class="secondsbuttonwrapper">
@@ -41,12 +48,14 @@
                 <button onclick="secondsCheckboxHide()">OK</button>
             </div>
         </div>
+        
         <!-- date, clock and message -->
         <div class="clockwrapper">
             <div id="date"></div>
             <div id="clock"></div>
             <div id="message"></div>
         </div>
+        
         <!-- author info -->
         <div id="author">
             Martin Sõmer, 2018
