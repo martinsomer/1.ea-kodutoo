@@ -18,13 +18,13 @@ body {
 }
 
 #date {
+    padding-top: 25vh;
     font-size: 2vw;
     font-family: 'Montserrat', sans-serif;
     margin: auto;
 }
 
 #clock {
-    margin: 0;
     font-size: 12.8vw;
     font-family: 'Montserrat', sans-serif;
     margin: auto;
