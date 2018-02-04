@@ -12,6 +12,8 @@ FEATURES:
 -Add a custom message
 -Show/hide seconds
 
-HOW TO USE
+HOW TO USE:
 -Use the controls in top-left to set the different options
 -Hover over the controls to see their features
+
+SCREENSHOTS:

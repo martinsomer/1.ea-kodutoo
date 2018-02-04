@@ -11,47 +11,47 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
     </head>
     <body>
-        <!-- div for controlling settings -->
-        <div class="controls">
+        <!-- controls -->
+        <div id="controlsWrapper">
             <!-- background selector -->
             <img id="backgroundIcon" src="backgroundIcon.png" onclick="imageTexboxAppear()" title="Change background">
             <div class="imagebuttonwrapper">
-                <input type="text" style="width:200px" id="imageTextbox" placeholder="Insert image URL" />
-                <button style="width:40px;margin-left: -5px" onclick="imageTextboxHide()">OK</button>
+                <input type="text" style="width:10vw;margin-left:2.8vw;" id="imageTextbox" placeholder="Insert image URL" />
+                <button onclick="imageTextboxHide()">OK</button>
             </div>
             <br>
             <!-- color selector -->
             <img id="colorPickerIcon" src="colorPickerIcon.png" onclick="colorTextboxAppear()" title="Change text color">
             <div class="colorbuttonwrapper">
-                <input type="text" style="width:200px" id="colorTextbox" placeholder="Insert color or HEX" />
-                <button style="width:40px;margin-left: -5px" onclick="colorTextboxHide()">OK</button>
+                <input type="text" style="width:10vw;margin-left:2.8vw;" id="colorTextbox" placeholder="Insert color or HEX" />
+                <button onclick="colorTextboxHide()">OK</button>
             </div>
             <br>
             <!-- message selector -->
             <img id="messageIcon" src="messageIcon.png" onclick="messageTextboxAppear()" title="Add a message">
             <div class="messagebuttonwrapper">
-                <input type="text" style="width:200px" id="messageTextbox" placeholder="Insert text" />
-                <button style="width:40px;margin-left: -5px" onclick="messageTextboxHide()">OK</button>
+                <input type="text" style="width:10vw;margin-left:2.8vw;" id="messageTextbox" placeholder="Insert text" />
+                <button onclick="messageTextboxHide()">OK</button>
             </div>
             <br>
             <!-- seconds selector -->
             <img id="secondsIcon" src="secondsIcon.png" onclick="secondsCheckboxAppear()" title="Toggle seconds">
             <div class="secondsbuttonwrapper">
-                <label for="secondsCheckbox">Show seconds?<input type="checkbox" id="secondsCheckbox"></label>
-                <button style="width:40px" onclick="secondsCheckboxHide()">OK</button>
+                <label for="secondsCheckbox" style="margin-left:2.8vw;">Show seconds?<input type="checkbox" id="secondsCheckbox" style="width: 1vw;"></label>
+                <button onclick="secondsCheckboxHide()">OK</button>
             </div>
         </div>
-        <!-- date, clock and message -->
-        <div class="clockwrapper">
-            <div id="date"></div>
-            <div id="clock"></div>
-            <div id="message"></div>
-        </div>
+            <!-- date, clock and message -->
+            <div class="clockwrapper">
+                <div id="date"></div>
+                <div id="clock"></div>
+                <div id="message"></div>
+            </div>
         <!-- author info -->
         <div id="author">
-            https://github.com/martinsomer/1.ea-kodutoo
-            <br>
             Martin Sõmer, 2018
+            <br>
+            https://github.com/martinsomer/1.ea-kodutoo
         </div>
     </body>
 </html>

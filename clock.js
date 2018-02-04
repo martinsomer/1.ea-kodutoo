@@ -69,14 +69,14 @@ function imageTexboxAppear() {
 function imageTextboxHide() {
     document.querySelector('.imagebuttonwrapper').style.display = "none"
     //check for URL
-    //if(/^(http|https|ftp):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/i.test($("#imageTextbox").val())){
+    if(/^(http|https|ftp):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/i.test($("#imageTextbox").val())){
         document.documentElement.style.background = "url(" + document.querySelector("#imageTextbox").value + ") no-repeat center fixed"
         document.documentElement.style.backgroundSize= "cover"
         document.documentElement.style.backgroundPosition = "relative"
-    //} else {
+    } else {
         //error
-        //alert("Invalid URL.")
-    //}
+        alert("Invalid URL.")
+    }
 }
 
 //unhide color selector textbox

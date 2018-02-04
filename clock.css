@@ -1,46 +1,56 @@
 html {
     /* Background pattern from Subtle Patterns */
     background: url(https://www.toptal.com/designers/subtlepatterns/patterns/px_by_Gre3g.png);
-    height: 100%;
+    height: 100vh;
+    width: 100vw;
 }
 
 body {
     margin: 0;
-    height: 100%;
+    height: 100vh;
+    width: 100vw;
     position: relative;
 }
 
 .clockwrapper {
-    display: grid;
-    margin-top: 10%;
     color: white;
+    text-align: center;
 }
 
 #date {
-    font-size: 220%;
-	font-family: 'Montserrat', sans-serif;
+    font-size: 2vw;
+    font-family: 'Montserrat', sans-serif;
     margin: auto;
 }
 
 #clock {
     margin: 0;
-    font-size: 1200%;
-	font-family: 'Montserrat', sans-serif;
+    font-size: 12.8vw;
+    font-family: 'Montserrat', sans-serif;
     margin: auto;
 }
 
 #message {
-    font-size: 120%;
-	font-family: 'Montserrat', sans-serif;
+    font-size: 1.1vw;
+    font-family: 'Montserrat', sans-serif;
     margin: auto;
 }
 
+#controlsWrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #383838;
+    border-radius: 0vw 0vw 1vw 0vw;
+    display: inline-block;
+    padding-bottom: 0.7vh;
+}
+
 img {
-    padding-left: 0.5%;
-    padding-top: 0.5%;
-    width: 2%;
+    width: 2vw;
     height: auto;
     vertical-align: middle;
+    margin: 0.3vw;
 }
 
 img:hover {
@@ -48,35 +58,89 @@ img:hover {
 }
 
 #author {
-    font-size: 80%;
-	font-family: 'Montserrat', sans-serif;
+    font-size: 0.6vw;
+    font-family: 'Montserrat', sans-serif;
     color: white;
     position: fixed;
-    right: 0;
-    top: 0;
-    text-align: right;
+    left: 0;
+    bottom: 0;
+    text-align: left;
+    background-color: #383838;
+    border-radius: 0vw 2vw 0vw 0vw;
+    padding-right: 1vw;
+    padding-top: 0.5vh;
+    padding-bottom: 0.3vh;
+    padding-left: 0.2vw;
 }
 
 .imagebuttonwrapper {
     display: none;
+    background-color: #383838;
+    border-radius: 0vw 0.4vw 0.4vw 0vw;
+    padding-bottom: 0.3vw;
+    padding-right: 0.4vw;
+    padding-top: 0.3vw;
+    position: fixed;
+    left: 0;
+    z-index: -1;
+    margin-top: 0.5vw;
 }
 
 .colorbuttonwrapper {
     display: none;
+    background-color: #383838;
+    border-radius: 0vw 0.4vw 0.4vw 0vw;
+    padding-bottom: 0.3vw;
+    padding-right: 0.4vw;
+    padding-top: 0.3vw;
+    position: fixed;
+    left: 0;
+    z-index: -1;
+    margin-top: 0.5vw;
 }
 
 .messagebuttonwrapper {
     display: none;
+    background-color: #383838;
+    border-radius: 0vw 0.4vw 0.4vw 0vw;
+    padding-bottom: 0.3vw;
+    padding-right: 0.4vw;
+    padding-top: 0.3vw;
+    position: fixed;
+    left: 0;
+    z-index: -1;
+    margin-top: 0.5vw;
 }
 
 .secondsbuttonwrapper {
     display: none;
     color: white;
-    font-size: 80%;
-	font-family: 'Montserrat', sans-serif;
+    font-size: 0.7vw;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #383838;
+    border-radius: 0vw 0.4vw 0.4vw 0vw;
+    padding-bottom: 0.3vw;
+    padding-right: 0.4vw;
+    padding-top: 0.3vw;
+    position: fixed;
+    left: 0;
+    z-index: -1;
+    margin-top: 0.5vw;
 }
 
-input, button {
-    border:1 solid black;
+button {
+    margin-top: 0.007vw;
+    text-align: center;
+    border-radius: 0vw 0.1vw 0.1vw 0vw;
+    font-size: 0.75vw;
     vertical-align: middle;
+    border: none;
+    margin-left: -0.3vw;
+    border: 1px solid gray;
+}
+
+input {
+    font-size: 0.75vw;
+    vertical-align: middle;
+    border: 1px solid gray;
 }
