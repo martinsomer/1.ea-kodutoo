@@ -1,0 +1,81 @@
+html {
+    /* Background pattern from Subtle Patterns */
+    background: url(https://www.toptal.com/designers/subtlepatterns/patterns/px_by_Gre3g.png);
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    position: relative;
+}
+
+.clockwrapper {
+    display: grid;
+    margin-top: 10%;
+    color: white;
+}
+
+#date {
+    font-size: 220%;
+	font-family: 'Montserrat', sans-serif;
+    margin: auto;
+}
+
+#clock {
+    margin: 0;
+    font-size: 1200%;
+	font-family: 'Montserrat', sans-serif;
+    margin: auto;
+}
+
+#message {
+    font-size: 120%;
+	font-family: 'Montserrat', sans-serif;
+    margin: auto;
+}
+
+img {
+    padding-left: 0.5%;
+    padding-top: 0.5%;
+    width: 2%;
+    height: auto;
+    vertical-align: middle;
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+#author {
+    font-size: 80%;
+	font-family: 'Montserrat', sans-serif;
+    color: white;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.imagebuttonwrapper {
+    display: none;
+}
+
+.colorbuttonwrapper {
+    display: none;
+}
+
+.messagebuttonwrapper {
+    display: none;
+}
+
+.secondsbuttonwrapper {
+    display: none;
+    color: white;
+    font-size: 80%;
+	font-family: 'Montserrat', sans-serif;
+}
+
+input, button {
+    border:1 solid black;
+    vertical-align: middle;
+}
