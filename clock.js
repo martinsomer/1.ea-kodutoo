@@ -22,12 +22,14 @@ function init () {
 function startClock () {
     window.setInterval(function () {
         
-        //get time and divide into parts
+        //get time
         today = new Date()
         
-        months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'Jully', 'August', 'September', 'October', 'November', 'December')
+        //arrays for day and month names
         var days = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday')
+        months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December')
         
+        //split time into parts
         var year = today.getFullYear()
         var month = today.getMonth()
         var d = today.getDate()
@@ -56,7 +58,9 @@ function startClock () {
 
 //add 0 in front of number if <10
 function formatTime(i) {
-    if (i < 10) {i = "0" + i}
+    if (i < 10) {
+        i = "0" + i
+    }
     return i
 }
 
@@ -69,12 +73,12 @@ function imageTexboxAppear() {
 function imageTextboxHide() {
     document.querySelector('.imagebuttonwrapper').style.display = "none"
     //check for URL
-    if(/^(http|https|ftp):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/i.test($("#imageTextbox").val())){
+    if (/^(http|https|ftp):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/i.test($("#imageTextbox").val())) {
         document.documentElement.style.background = "url(" + document.querySelector("#imageTextbox").value + ") no-repeat center fixed"
         document.documentElement.style.backgroundSize= "cover"
         document.documentElement.style.backgroundPosition = "relative"
     } else {
-        //error
+        //display error
         alert("Invalid URL.")
     }
 }
@@ -84,7 +88,7 @@ function colorTextboxAppear() {
     document.querySelector('.colorbuttonwrapper').style.display = "initial"
 }
 
-//change clock color and hide textbox
+//change clock color and hide color selector textbox
 function colorTextboxHide() {
     document.querySelector('.colorbuttonwrapper').style.display = "none"
     document.querySelector('.clockwrapper').style.color = document.querySelector("#colorTextbox").value
@@ -95,7 +99,7 @@ function messageTextboxAppear() {
     document.querySelector('.messagebuttonwrapper').style.display = "initial"
 }
 
-//change message hide textbox
+//change message and hide message textbox
 function messageTextboxHide() {
     document.querySelector('.messagebuttonwrapper').style.display = "none"
     document.querySelector('#message').innerHTML = document.querySelector("#messageTextbox").value
@@ -106,7 +110,7 @@ function secondsCheckboxAppear() {
     document.querySelector('.secondsbuttonwrapper').style.display = "initial"
 }
 
-//change 'showSeconds' value and hide checkbox
+//change 'showSeconds' value and hide seconds checkbox
 function secondsCheckboxHide() {
     document.querySelector('.secondsbuttonwrapper').style.display = "none"
     //check if checkbox is checked, and modify 'showSeconds' value accordingly
