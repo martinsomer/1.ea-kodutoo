@@ -73,59 +73,23 @@ img:hover {
     padding-left: 0.2vw;
 }
 
-.imagebuttonwrapper {
+div[class*="buttonwrapper"] {
     display: none;
     background-color: #383838;
     border-radius: 0vw 0.4vw 0.4vw 0vw;
-    padding-bottom: 0.3vw;
-    padding-right: 0.4vw;
-    padding-top: 0.3vw;
     position: fixed;
     left: 0;
     z-index: -1;
     margin-top: 0.5vw;
-}
-
-.colorbuttonwrapper {
-    display: none;
-    background-color: #383838;
-    border-radius: 0vw 0.4vw 0.4vw 0vw;
-    padding-bottom: 0.3vw;
-    padding-right: 0.4vw;
     padding-top: 0.3vw;
-    position: fixed;
-    left: 0;
-    z-index: -1;
-    margin-top: 0.5vw;
-}
-
-.messagebuttonwrapper {
-    display: none;
-    background-color: #383838;
-    border-radius: 0vw 0.4vw 0.4vw 0vw;
-    padding-bottom: 0.3vw;
     padding-right: 0.4vw;
-    padding-top: 0.3vw;
-    position: fixed;
-    left: 0;
-    z-index: -1;
-    margin-top: 0.5vw;
+    padding-bottom: 0.3vw;
 }
 
 .secondsbuttonwrapper {
-    display: none;
     color: white;
     font-size: 0.7vw;
     font-family: 'Montserrat', sans-serif;
-    background-color: #383838;
-    border-radius: 0vw 0.4vw 0.4vw 0vw;
-    padding-bottom: 0.3vw;
-    padding-right: 0.4vw;
-    padding-top: 0.3vw;
-    position: fixed;
-    left: 0;
-    z-index: -1;
-    margin-top: 0.5vw;
 }
 
 button {
