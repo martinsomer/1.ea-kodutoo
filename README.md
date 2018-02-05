@@ -1,4 +1,4 @@
-## HTML + CSS + JS + (JQuery) of a page for displaying a desk clock, with some additional features. ##  
+## Webpage for displaying a desk clock, with some additional features. ##  
 #### Martin Sõmer, 2018 ####  
 - - - -
 
