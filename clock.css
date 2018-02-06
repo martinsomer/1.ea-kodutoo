@@ -1,16 +1,18 @@
-html {
-    /* Background pattern from Subtle Patterns */
-    background: url(https://www.toptal.com/designers/subtlepatterns/patterns/px_by_Gre3g.png);
-    height: 100vh;
-    width: 100vw;
+html, body {
+    margin: 0;
+    padding: 0;
 }
 
-body {
-    margin: 0;
-    height: 100vh;
-    width: 100vw;
-    position: relative;
-}
+#background {
+    /* Background pattern from Subtle Patterns */
+    background: url(https://www.toptal.com/designers/subtlepatterns/patterns/px_by_Gre3g.png);
+    position: fixed;
+    width: 101vw;
+    height: 101vh;
+    top: -0.3vh;
+    left: -0.5vw;
+    z-index: -1;
+ }
 
 .clockwrapper {
     color: white;
@@ -73,20 +75,33 @@ img:hover {
     padding-left: 0.2vw;
 }
 
-div[class*="buttonwrapper"] {
+div[class*="buttonwrapper"]:not(.blurbuttonwrapper) {
     display: none;
     background-color: #383838;
     border-radius: 0vw 0.4vw 0.4vw 0vw;
     position: fixed;
     left: 0;
     z-index: -1;
-    margin-top: 0.5vw;
     padding-top: 0.3vw;
     padding-right: 0.4vw;
     padding-bottom: 0.3vw;
+    margin-top: 0.2vw;
 }
 
-.secondsbuttonwrapper {
+.blurbuttonwrapper {
+    display: none;
+    background-color: #383838;
+    border-radius: 0vw 0.4vw 0.4vw 0vw;
+    position: fixed;
+    left: 0;
+    z-index: -1;
+    padding-top: 0.3vw;
+    padding-right: 0.4vw;
+    padding-bottom: 0.3vw;
+    margin-top: 0.5vw;
+}
+
+.secondsbuttonwrapper, .blurbuttonwrapper {
     color: white;
     font-size: 0.7vw;
     font-family: 'Montserrat', sans-serif;
@@ -101,10 +116,33 @@ button {
     border: none;
     margin-left: -0.3vw;
     border: 1px solid gray;
+    cursor: pointer;
 }
 
 input {
     font-size: 0.75vw;
     vertical-align: middle;
     border: 1px solid gray;
+}
+
+#blurSlider {
+    -webkit-appearance: none;
+    height: 0.1vw;
+}
+
+#blurSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 0.5vw;
+    height: 0.9vw;
+    background: #FCFCFC;
+    cursor: pointer;
+    border: 1px solid gray;
+}
+
+#blurSlider::-moz-range-thumb {
+    width: 0.5vw;
+    height: 0.9vw;
+    background: #FCFCFC;
+    cursor: pointer;
 }

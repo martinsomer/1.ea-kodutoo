@@ -14,7 +14,6 @@ function init () {
     dateContainer = document.querySelector('#date')
     clockContainer = document.querySelector('#clock')
     messageContainer = document.querySelector('#message')
-    //console.log(clockContainer)
     startClock()
 }
 
@@ -23,20 +22,20 @@ function startClock () {
     window.setInterval(function () {
         
         //get time
-        today = new Date()
+        let today = new Date()
         
         //arrays for day and month names
-        var days = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday')
-        months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December')
+        let days = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday')
+        let months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December')
         
         //split time into parts
-        var year = today.getFullYear()
-        var month = today.getMonth()
-        var d = today.getDate()
-        var day = today.getDay()
-        var h = today.getHours()
-        var m = today.getMinutes()
-        var s = today.getSeconds()
+        let year = today.getFullYear()
+        let month = today.getMonth()
+        let d = today.getDate()
+        let day = today.getDay()
+        let h = today.getHours()
+        let m = today.getMinutes()
+        let s = today.getSeconds()
         
         //format the time
         h = formatTime(h)
@@ -74,14 +73,26 @@ function imageTextboxHide() {
     document.querySelector('.imagebuttonwrapper').style.display = "none"
     //check for URL
     if (/^(http|https|ftp):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/i.test($("#imageTextbox").val())) {
-        document.documentElement.style.background = "url(" + document.querySelector("#imageTextbox").value + ") no-repeat center fixed"
-        document.documentElement.style.backgroundSize= "cover"
-        document.documentElement.style.backgroundPosition = "relative"
+        //change background
+        document.querySelector('#background').style.background = "url(" + document.querySelector("#imageTextbox").value + ") no-repeat center"
+        document.querySelector('#background').style.backgroundSize = "cover"
     } else {
         //display error
         alert("Invalid URL.")
     }
 }
+
+//unhide blur selector slider
+function blurSliderAppear() {
+    document.querySelector('.blurbuttonwrapper').style.display = "initial"
+}
+
+//apply blur and hide blur slider
+function blurSliderHide() {
+    document.querySelector('.blurbuttonwrapper').style.display = "none"
+    document.querySelector('#background').style.filter = "blur(" + (document.querySelector("#blurSlider").value / 10) + "px)"
+}
+
 
 //unhide color selector textbox
 function colorTextboxAppear() {

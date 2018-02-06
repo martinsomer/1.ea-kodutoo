@@ -14,6 +14,9 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     </head>
     <body>
+        <!-- background for blurring -->
+        <div id="background"></div>
+        
         <!-- controls -->
         <div id="controlsWrapper">
             
@@ -22,6 +25,14 @@
             <div class="imagebuttonwrapper">
                 <input type="text" style="width:10vw;margin-left:2.8vw;" id="imageTextbox" placeholder="Insert image URL" />
                 <button onclick="imageTextboxHide()">OK</button>
+            </div>
+            <br>
+            
+            <!-- blur selector -->
+            <img id="blurIcon" src="Icons/blurIcon.png" onclick="blurSliderAppear()" title="Apply blur">
+            <div class="blurbuttonwrapper">
+                <label for="blurSlider" style="margin-left:2.8vw;">Blur amount: <input type="range" style="width:4.7vw;margin-left:0.4vw;" min="1" max="50" value="0" id="blurSlider" /></label>
+                <button onclick="blurSliderHide()">OK</button>
             </div>
             <br>
             
@@ -44,7 +55,7 @@
             <!-- seconds selector -->
             <img id="secondsIcon" src="Icons/secondsIcon.png" onclick="secondsCheckboxAppear()" title="Toggle seconds">
             <div class="secondsbuttonwrapper">
-                <label for="secondsCheckbox" style="margin-left:2.8vw;">Show seconds?<input type="checkbox" id="secondsCheckbox" style="width: 1vw;"></label>
+                <label for="secondsCheckbox" style="margin-left:2.8vw;">Show seconds?<input type="checkbox" id="secondsCheckbox" style="width: 1vw;" /></label>
                 <button onclick="secondsCheckboxHide()">OK</button>
             </div>
         </div>
