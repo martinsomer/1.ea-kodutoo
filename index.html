@@ -23,7 +23,7 @@
             <!-- background selector -->
             <img id="backgroundIcon" src="Icons/backgroundIcon.png" onclick="imageTexboxAppear()" title="Change background">
             <div class="imagebuttonwrapper">
-                <input type="text" style="width:10vw;margin-left:2.8vw;" id="imageTextbox" placeholder="Insert image URL" />
+                <input type="text" style="width: 10vw;" id="imageTextbox" placeholder="Insert image URL" />
                 <button onclick="imageTextboxHide()">OK</button>
             </div>
             <br>
@@ -31,15 +31,16 @@
             <!-- blur selector -->
             <img id="blurIcon" src="Icons/blurIcon.png" onclick="blurSliderAppear()" title="Apply blur">
             <div class="blurbuttonwrapper">
-                <label for="blurSlider" style="margin-left:2.8vw;">Blur amount: <input type="range" style="width:4.7vw;margin-left:0.4vw;" min="1" max="50" value="0" id="blurSlider" /></label>
-                <button onclick="blurSliderHide()">OK</button>
+                <label for="blurSlider">Blur amount:</label>
+                <input type="range" style="width: 4.7vw;" min="1" max="50" value="0" id="blurSlider" />
+                <button onclick="blurSliderHide()" style="margin-left: 0.1vw;">OK</button>
             </div>
             <br>
             
             <!-- color selector -->
             <img id="colorPickerIcon" src="Icons/colorPickerIcon.png" onclick="colorTextboxAppear()" title="Change text color">
             <div class="colorbuttonwrapper">
-                <input type="text" style="width:10vw;margin-left:2.8vw;" id="colorTextbox" placeholder="Insert color or HEX" />
+                <input type="text" style="width: 10vw;" id="colorTextbox" placeholder="Insert color or HEX" />
                 <button onclick="colorTextboxHide()">OK</button>
             </div>
             <br>
@@ -47,7 +48,7 @@
             <!-- message selector -->
             <img id="messageIcon" src="Icons/messageIcon.png" onclick="messageTextboxAppear()" title="Add a message">
             <div class="messagebuttonwrapper">
-                <input type="text" style="width:10vw;margin-left:2.8vw;" id="messageTextbox" placeholder="Insert text" />
+                <input type="text" style="width: 10vw;" id="messageTextbox" placeholder="Insert text" />
                 <button onclick="messageTextboxHide()">OK</button>
             </div>
             <br>
@@ -55,7 +56,8 @@
             <!-- seconds selector -->
             <img id="secondsIcon" src="Icons/secondsIcon.png" onclick="secondsCheckboxAppear()" title="Toggle seconds">
             <div class="secondsbuttonwrapper">
-                <label for="secondsCheckbox" style="margin-left:2.8vw;">Show seconds?<input type="checkbox" id="secondsCheckbox" style="width: 1vw;" /></label>
+                <label for="secondsCheckbox">Show seconds?</label>
+                <input type="checkbox" id="secondsCheckbox" style="width: 1vw; margin-right: 0.35vw;" />
                 <button onclick="secondsCheckboxHide()">OK</button>
             </div>
         </div>
