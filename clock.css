@@ -1,4 +1,4 @@
-html, body {
+* {
     margin: 0;
     padding: 0;
 }
@@ -17,34 +17,28 @@ html, body {
 .clockwrapper {
     color: white;
     text-align: center;
-}
-
-#date {
-    padding-top: 25vh;
     font-size: 2vw;
     font-family: 'Montserrat', sans-serif;
     margin: auto;
 }
 
+#date {
+    padding-top: 25vh;
+}
+
 #clock {
     font-size: 12.8vw;
-    font-family: 'Montserrat', sans-serif;
-    margin: auto;
 }
 
 #message {
     font-size: 1.1vw;
-    font-family: 'Montserrat', sans-serif;
-    margin: auto;
 }
 
 #controlsWrapper {
+    display: inline-block;
     position: fixed;
-    left: 0;
-    top: 0;
     background-color: #383838;
     border-radius: 0vw 0vw 1vw 0vw;
-    display: inline-block;
     padding-bottom: 0.7vh;
 }
 
@@ -64,65 +58,61 @@ img:hover {
     font-family: 'Montserrat', sans-serif;
     color: white;
     position: fixed;
-    left: 0;
     bottom: 0;
     text-align: left;
     background-color: #383838;
     border-radius: 0vw 2vw 0vw 0vw;
     padding-right: 1vw;
-    padding-top: 0.5vh;
+    padding-top: 0.7vh;
     padding-bottom: 0.3vh;
-    padding-left: 0.2vw;
+    padding-left: 0.3vw;
 }
 
-div[class*="buttonwrapper"]:not(.blurbuttonwrapper) {
-    display: none;
+div[class*="buttonwrapper"] {
+    visibility: hidden;
+    display: inline;
+    position: fixed;
     background-color: #383838;
     border-radius: 0vw 0.4vw 0.4vw 0vw;
-    position: fixed;
-    left: 0;
-    z-index: -1;
     padding-top: 0.3vw;
-    padding-right: 0.4vw;
     padding-bottom: 0.3vw;
+    padding-right: 0.4vw;
     margin-top: 0.2vw;
-}
-
-.blurbuttonwrapper {
-    display: none;
-    background-color: #383838;
-    border-radius: 0vw 0.4vw 0.4vw 0vw;
-    position: fixed;
-    left: 0;
+    padding-left: 5vw;
     z-index: -1;
-    padding-top: 0.3vw;
-    padding-right: 0.4vw;
-    padding-bottom: 0.3vw;
-    margin-top: 0.5vw;
+    left: -2vw;
 }
 
-.secondsbuttonwrapper, .blurbuttonwrapper {
+label {
     color: white;
     font-size: 0.7vw;
     font-family: 'Montserrat', sans-serif;
+    vertical-align: middle;
 }
 
 button {
     margin-top: 0.007vw;
     text-align: center;
-    border-radius: 0vw 0.1vw 0.1vw 0vw;
     font-size: 0.75vw;
     vertical-align: middle;
     border: none;
-    margin-left: -0.3vw;
     border: 1px solid gray;
     cursor: pointer;
+    margin-left: -0.3vw;
+    padding-right: 0.5vw;
+    padding-left: 0.5vw;
+    padding-top: 0.1vw;
+    padding-bottom: 0.1vw;
 }
 
 input {
     font-size: 0.75vw;
     vertical-align: middle;
     border: 1px solid gray;
+}
+
+input:not(#blurSlider) {
+    padding: 0.1vw;
 }
 
 #blurSlider {
