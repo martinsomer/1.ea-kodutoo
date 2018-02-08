@@ -54,7 +54,6 @@ function startClock () {
     }, 1000) //timer
 }
 
-
 //add 0 in front of number if <10
 function formatTime(i) {
     if (i < 10) {
@@ -82,7 +81,7 @@ function imageTextboxHide() {
     }
 }
 
-//unhide blur selector slider
+//unhide blur slider
 function blurSliderAppear() {
     document.querySelector('.blurbuttonwrapper').style.visibility = "visible"
 }
@@ -92,7 +91,6 @@ function blurSliderHide() {
     document.querySelector('.blurbuttonwrapper').style.visibility = "hidden"
     document.querySelector('#background').style.filter = "blur(" + (document.querySelector("#blurSlider").value / 10) + "px)"
 }
-
 
 //unhide color selector textbox
 function colorTextboxAppear() {
