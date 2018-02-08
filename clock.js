@@ -65,12 +65,12 @@ function formatTime(i) {
 
 //unhide image URL textbox
 function imageTexboxAppear() {
-    document.querySelector('.imagebuttonwrapper').style.display = "initial"
+    document.querySelector('.imagebuttonwrapper').style.visibility = "visible"
 }
 
 //change background and hide textbox
 function imageTextboxHide() {
-    document.querySelector('.imagebuttonwrapper').style.display = "none"
+    document.querySelector('.imagebuttonwrapper').style.visibility = "hidden"
     //check for URL
     if (/^(http|https|ftp):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/i.test($("#imageTextbox").val())) {
         //change background
@@ -84,46 +84,46 @@ function imageTextboxHide() {
 
 //unhide blur selector slider
 function blurSliderAppear() {
-    document.querySelector('.blurbuttonwrapper').style.display = "initial"
+    document.querySelector('.blurbuttonwrapper').style.visibility = "visible"
 }
 
 //apply blur and hide blur slider
 function blurSliderHide() {
-    document.querySelector('.blurbuttonwrapper').style.display = "none"
+    document.querySelector('.blurbuttonwrapper').style.visibility = "hidden"
     document.querySelector('#background').style.filter = "blur(" + (document.querySelector("#blurSlider").value / 10) + "px)"
 }
 
 
 //unhide color selector textbox
 function colorTextboxAppear() {
-    document.querySelector('.colorbuttonwrapper').style.display = "initial"
+    document.querySelector('.colorbuttonwrapper').style.visibility = "visible"
 }
 
 //change clock color and hide color selector textbox
 function colorTextboxHide() {
-    document.querySelector('.colorbuttonwrapper').style.display = "none"
+    document.querySelector('.colorbuttonwrapper').style.visibility = "hidden"
     document.querySelector('.clockwrapper').style.color = document.querySelector("#colorTextbox").value
 }
 
 //unhide message textbox
 function messageTextboxAppear() {
-    document.querySelector('.messagebuttonwrapper').style.display = "initial"
+    document.querySelector('.messagebuttonwrapper').style.visibility = "visible"
 }
 
 //change message and hide message textbox
 function messageTextboxHide() {
-    document.querySelector('.messagebuttonwrapper').style.display = "none"
+    document.querySelector('.messagebuttonwrapper').style.visibility = "hidden"
     document.querySelector('#message').innerHTML = document.querySelector("#messageTextbox").value
 }
 
 //unhide seconds checkbox
 function secondsCheckboxAppear() {
-    document.querySelector('.secondsbuttonwrapper').style.display = "initial"
+    document.querySelector('.secondsbuttonwrapper').style.visibility = "visible"
 }
 
 //change 'showSeconds' value and hide seconds checkbox
 function secondsCheckboxHide() {
-    document.querySelector('.secondsbuttonwrapper').style.display = "none"
+    document.querySelector('.secondsbuttonwrapper').style.visibility = "hidden"
     //check if checkbox is checked, and modify 'showSeconds' value accordingly
     if (document.querySelector('#secondsCheckbox').checked == true) {
         showSeconds = true
