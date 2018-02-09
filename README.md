@@ -18,6 +18,9 @@
     * "Change text color" - Enter a HEX color code (i.e. "#C11218") or color name (i.e. "GREEN") into the text box and click "OK"  
     * "Add a message" - Enter text into the text box and click "OK"  
     * "Toggle seconds" - Check or un-check the box and click "OK"  
+    
+### HOW *_NOT_* TO USE ###  
+* Do not use images from websites with no hotlinking. The resulting background does not cover the whole browser window.
 
 ## SCREENSHOTS: ##   
 ![Screenshot 1](Screenshots/screenshot_1.png "Background + Message")  
