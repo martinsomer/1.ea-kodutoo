@@ -6,7 +6,7 @@
 #background {
     /*  Backbround published on Pixabay under Creative Commons  CC0 License   */
     /*  https://pixabay.com/en/sunset-dawn-sky-evening-panorama-3126715/  */
-    background: url(https://cdn.pixabay.com/photo/2018/02/03/00/52/sunset-3126715_1280.jpg) no-repeat center;
+    background: url(backgrounds/background.jpg) no-repeat center;
     background-size: cover;
     position: fixed;
     filter: blur(2px);
