@@ -4,29 +4,30 @@
 }
 
 #background {
-    /*  Backbround published on Pixabay under Creative Commons  CC0 License   */
-    /*  https://pixabay.com/en/sunset-dawn-sky-evening-panorama-3126715/  */
+    /*  Backbround published on Pixabay under Creative Commons  CC0 License */
+    /* https://pixabay.com/en/sunset-dawn-sky-evening-panorama-3126715/ */
     background: url(backgrounds/background.jpg) no-repeat center;
     background-size: cover;
     position: fixed;
     filter: blur(2px);
+    /* Oversized background to avoid white borders when blur effect applied */
+    z-index: -1;
     width: 101vw;
     height: 101vh;
     top: -0.3vh;
     left: -0.5vw;
-    z-index: -1;
  }
 
 .clockwrapper {
     color: white;
     text-align: center;
-    font-size: 2vw;
     font-family: 'Montserrat', sans-serif;
     margin: auto;
+    padding-top: 25vh;
 }
 
 #date {
-    padding-top: 25vh;
+    font-size: 2vw;
 }
 
 #clock {
