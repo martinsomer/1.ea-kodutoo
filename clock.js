@@ -50,6 +50,8 @@ function startClock () {
     } else {
         clockContainer.innerHTML = h + ":" + m
     }
+    
+    //restart clock script
     setTimeout(startClock, 1000)
 }
 
@@ -73,6 +75,7 @@ function imageTextboxHide() {
     if (/^(http|https|ftp):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/i.test($("#imageTextbox").val())) {
         //change background
         document.querySelector('#background').style.background = "url(" + document.querySelector("#imageTextbox").value + ") no-repeat center"
+        document.querySelector('#background').style.backgroundSize = "cover"
     } else {
         //display error
         alert("Invalid URL.")
