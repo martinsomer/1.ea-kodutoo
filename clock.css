@@ -4,9 +4,12 @@
 }
 
 #background {
-    /* Background pattern from Subtle Patterns */
-    background: url(https://www.toptal.com/designers/subtlepatterns/patterns/px_by_Gre3g.png);
+    /*  Backbround published on Pixabay under Creative Commons  CC0 License   */
+    /*  https://pixabay.com/en/sunset-dawn-sky-evening-panorama-3126715/  */
+    background: url(https://cdn.pixabay.com/photo/2018/02/03/00/52/sunset-3126715_1280.jpg) no-repeat center;
+    background-size: cover;
     position: fixed;
+    filter: blur(2px);
     width: 101vw;
     height: 101vh;
     top: -0.3vh;
