@@ -19,39 +19,38 @@ function init () {
 
 //clock main script
 function startClock () {
-    window.setInterval(function () {
-        
-        //get time
-        let today = new Date()
-        
-        //arrays for day and month names
-        let days = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday')
-        let months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December')
-        
-        //split time into parts
-        let year = today.getFullYear()
-        let month = today.getMonth()
-        let d = today.getDate()
-        let day = today.getDay()
-        let h = today.getHours()
-        let m = today.getMinutes()
-        let s = today.getSeconds()
-        
-        //format the time
-        h = formatTime(h)
-        m = formatTime(m)
-        s = formatTime(s)
-        
-        //edit 'date' element
-        dateContainer.innerHTML = days[day] + ", " + d + ". of " + months[month] + " " + year
-        
-        //edit 'clock' element based on 'showSeconds' value
-        if (showSeconds == true) {
-            clockContainer.innerHTML = h + ":" + m + ":" + s
-        } else {
-            clockContainer.innerHTML = h + ":" + m
-        }
-    }, 1000) //timer
+
+    //get time
+    let today = new Date()
+
+    //arrays for day and month names
+    let days = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday')
+    let months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December')
+
+    //split time into parts
+    let year = today.getFullYear()
+    let month = today.getMonth()
+    let d = today.getDate()
+    let day = today.getDay()
+    let h = today.getHours()
+    let m = today.getMinutes()
+    let s = today.getSeconds()
+
+    //format the time
+    h = formatTime(h)
+    m = formatTime(m)
+    s = formatTime(s)
+
+    //edit 'date' element
+    dateContainer.innerHTML = days[day] + ", " + d + ". of " + months[month] + " " + year
+
+    //edit 'clock' element based on 'showSeconds' value
+    if (showSeconds == true) {
+        clockContainer.innerHTML = h + ":" + m + ":" + s
+    } else {
+        clockContainer.innerHTML = h + ":" + m
+    }
+    setTimeout(startClock, 1000)
 }
 
 //add 0 in front of number if <10
@@ -74,7 +73,6 @@ function imageTextboxHide() {
     if (/^(http|https|ftp):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/i.test($("#imageTextbox").val())) {
         //change background
         document.querySelector('#background').style.background = "url(" + document.querySelector("#imageTextbox").value + ") no-repeat center"
-        document.querySelector('#background').style.backgroundSize = "cover"
     } else {
         //display error
         alert("Invalid URL.")
